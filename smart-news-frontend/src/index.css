@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-neutral-800;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  * {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .stock-chip {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-primary-100 to-primary-200 text-primary-800 border border-primary-300 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105;
+  }
+  
+  .stock-chip-remove {
+    @apply ml-2 h-4 w-4 text-primary-600 hover:text-error-600 cursor-pointer transition-colors duration-200 hover:scale-110;
+  }
+  
+  .news-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-soft border border-white/50 p-6 hover:shadow-medium transition-all duration-300 hover:scale-[1.02] hover:bg-white/90 animate-fade-in;
+  }
+  
+  .impact-badge {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm;
+  }
+  
+  .impact-positive {
+    @apply bg-gradient-to-r from-success-100 to-success-200 text-success-800 border border-success-300;
+  }
+  
+  .impact-negative {
+    @apply bg-gradient-to-r from-error-100 to-error-200 text-error-800 border border-error-300;
+  }
+  
+  .impact-neutral {
+    @apply bg-gradient-to-r from-neutral-100 to-neutral-200 text-neutral-700 border border-neutral-300;
+  }
+  
+  .loading-skeleton {
+    @apply animate-pulse bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-200 bg-[length:200%_100%] rounded-lg;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .section-card {
+    @apply bg-white/70 backdrop-blur-md rounded-3xl shadow-large border border-white/60 p-8 hover:shadow-colored transition-all duration-500;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl font-semibold shadow-medium hover:shadow-large hover:from-primary-600 hover:to-primary-700 focus:ring-4 focus:ring-primary-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-xl font-semibold shadow-medium hover:shadow-large hover:from-secondary-600 hover:to-secondary-700 focus:ring-4 focus:ring-secondary-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-success {
+    @apply px-6 py-3 bg-gradient-to-r from-success-500 to-success-600 text-white rounded-xl font-semibold shadow-medium hover:shadow-large hover:from-success-600 hover:to-success-700 focus:ring-4 focus:ring-success-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-neutral-300 rounded-xl focus:ring-4 focus:ring-primary-200 focus:border-primary-500 transition-all duration-300 placeholder-neutral-400 shadow-sm hover:shadow-md;
+  }
+  
+  .icon-wrapper {
+    @apply p-3 rounded-2xl shadow-soft transition-all duration-300 hover:shadow-medium hover:scale-110;
+  }
+  
+  .number-badge {
+    @apply flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-soft transition-all duration-300 hover:shadow-medium hover:scale-110;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
