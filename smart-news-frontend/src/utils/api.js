@@ -1,7 +1,7 @@
 import axios from 'axios';
 const BASE_URL =
 	process.env.BACKEND_URL ||
-	'https://smart-news-portfolio-insight.onrender.com/';
+	'https://smart-news-portfolio-insight.onrender.com';
 
 const defaultConfig = {
 	timeout: 10000,
