@@ -43,10 +43,10 @@ Respond only in JSON format:
 
 		try {
 			const response = await openai.chat.completions.create({
-				model: 'openai/gpt-4o',
+				model: 'deepseek/deepseek-r1:free',
 				messages,
 				temperature: 0.5,
-				max_tokens: headline.length * 2 + 150, // Adjusted to allow for longer responses
+				max_tokens: headline.length * 2 + 300, // Adjusted to allow for longer responses
 			});
 
 			const raw = response.choices[0].message.content;
