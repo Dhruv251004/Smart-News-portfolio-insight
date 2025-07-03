@@ -187,16 +187,22 @@ const FilteredNews = ({ portfolio, filteredNews, loading, error }) => {
 				setAnalysisLoading(true);
 				setAnalysisError(null);
 
-				const response = await fetch('http://localhost:5000/analyze', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						headlines: filteredNews,
-						portfolio: portfolio,
-					}),
-				});
+				const response = await fetch(
+					`${
+						process.env.BACKEND_URL ||
+						'https://smart-news-portfolio-insight.onrender.com'
+					}/analyze`,
+					{
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({
+							headlines: filteredNews,
+							portfolio: portfolio,
+						}),
+					}
+				);
 
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
