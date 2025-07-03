@@ -18,6 +18,8 @@ function App() {
 	});
 
 	useEffect(() => {
+		console.log('App mounted', process.env.BACKEND_URL);
+
 		setPortfolio(
 			localStorage.getItem('portfolio')
 				? JSON.parse(localStorage.getItem('portfolio'))
