@@ -37,6 +37,8 @@ Respond only in JSON format:
     }
   ]
 }
+
+Please ensure your response is valid JSON and does not include any additional text or explanations.
 				`.trim(),
 			},
 		];
